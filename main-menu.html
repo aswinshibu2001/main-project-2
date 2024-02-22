@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="main-menu.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+   <script type="module" src="missing-p-details.js"></script>
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore,collection, addDoc  } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCzjAdpOcwGcZjTmc8lIu1g5o_bzuIbVyc",
+            authDomain: "prapth-dae1d.firebaseapp.com",
+            projectId: "prapth-dae1d",
+            storageBucket: "prapth-dae1d.appspot.com",
+            messagingSenderId: "406083203416",
+            appId: "1:406083203416:web:905092c7215732cab8352d",
+            measurementId: "G-TZ3NX9RGYM"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('missingPersonForm');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                addDoc(collection(db, 'missing_persons'), {
+                    name: form.elements.name.value,
+                    age: form.elements.age.value,
+                    address: form.elements.address.value,
+                    place: form.elements.place.value,
+                    days: form.elements.days.value,
+                    email: form.elements.email.value,
+                    contact: form.elements.contact.value,
+                    details: form.elements.details.value,
+                    photos: form.elements.photos.value,
+                    // You can add more fields as needed
+                })
+                .then(function(docRef) {
+                    console.log("Document written with ID: ", docRef.id);
+                    alert("Successfully added to Firestore!");
+                })
+                .catch(function(error) {
+                    console.error("Error adding document: ", error);
+                    alert("Error adding to Firestore. Please check console for details.");
+                });
+            });
+        });
+    </script> -->
+
+
+</head>
+<body>
+    <div class="background">
+        <a href="#" class="logo">
+            <img src="prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
+        </a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+        </nav>
+
+        <div class="home-container">
+            <h2>Welcome to PRAPTH</h2>
+            <p>Choose an option to get started:</p>
+            
+            <div class="button-container">
+                <div class="button-wrapper">
+                    <div class="button-description">
+                        <p>
+                            Report details of a missing person, providing information that can aid in their search and recovery.
+                        </p>
+                    </div>
+                    <button id="reportBtn">
+                        Report Missing Person Details
+                    </button>
+                </div>
+
+                <div class="button-wrapper">
+                    <div class="button-description">
+                        <p>
+                            Explore tools and resources for identifying missing persons, including facial recognition technology.
+                        </p>
+                    </div>
+                    <button onclick="location.href='suspect_reporting.html'">
+                        Missing Person Identification
+                    </button>
+                </div>
+
+                <div class="button-wrapper">
+                    <div class="button-description">
+                        <p>
+                            Engage with discussions and reports on various social issues impacting our communities.
+                        </p>
+                    </div>
+                    <button onclick="location.href='social_issues.html'">
+                        Social Issues
+                    </button>
+                </div>
+            </div>
+
+            <!-- Form for reporting missing person details (initially hidden) -->
+            <div class="form-container" id="reportForm" style="display: none;">
+                <h3>Report Missing Person</h3>
+                <form id="missingPersonForm">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+
+                    <label for="age">Age:</label><br>
+                    <input type="text" id="age" name="age"><br>
+
+                    <label for="address">Address:</label><br>
+                    <input type="text" id="address" name="address"><br>
+
+                    <label for="place">Place Where the Person Went Missing:</label><br>
+                    <input type="text" id="place" name="place"><br>
+
+                    <label for="days">Days Missing:</label><br>
+                    <input type="text" id="days" name="days"><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+
+                    <label for="contact">Contact Details:</label><br>
+                    <input type="text" id="contact" name="contact"><br>
+
+                    <label for="details">Other Details:</label><br>
+                    <textarea id="details" name="details"></textarea><br>
+
+                    <label for="photos">Upload Photos:</label><br>
+                    <input type="file" id="photos" name="photos" multiple><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>    
+
+       </div>
+    </div>
+
+    <script src="main-menu.js"></script>
+</body>
+</html>

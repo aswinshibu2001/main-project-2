@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <!-- <link rel="stylesheet" type="text/css" href="face.css"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+</head>
+<body>
+    <div class="background">
+        <a href="#" class="logo">
+            <img src="prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
+        </a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+        </nav>
+
+        <div class="home-container">
+            <h2>Welcome to PRAPTH</h2>
+            <p>Choose an option to get started:</p>
+            <!-- Form for missing person identification (initially hidden) -->
+            <div class="form-container" id="identificationForm" >
+                <h3>Missing Person Identification</h3>
+                <form>
+                    <label for="date">Date:</label><br>
+                    <input type="date" id="date" name="date"><br>
+
+                    <label for="time">Time:</label><br>
+                    <input type="time" id="time" name="time"><br>
+
+                    <label for="location">Location:</label><br>
+                    <input type="text" id="location" name="location"><br>
+
+                    <label for="images">Upload Images:</label><br>
+                    <input type="file" id="images" name="images" multiple><br><br>
+
+                    <!-- <button onclick="getLocation()">Get Location</button><br><br> -->
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
